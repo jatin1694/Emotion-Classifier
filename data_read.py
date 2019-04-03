@@ -1,6 +1,8 @@
 import numpy as np
 import cv2
 
+#TODO: Add data folder in images to read from our data
+
 # Read the start pic for subject 1
 start_s1 = cv2.imread("image/data/S005/001/S005_001_00000001.png", 0)
 
