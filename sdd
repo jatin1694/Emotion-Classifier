@@ -1,0 +1,1917 @@
+[1mdiff --git a/DataLoader.ipynb b/DataLoader.ipynb[m
+[1mindex 2082a24..72db210 100644[m
+[1m--- a/DataLoader.ipynb[m
+[1m+++ b/DataLoader.ipynb[m
+[36m@@ -2,7 +2,7 @@[m
+  "cells": [[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 9,[m
+[32m+[m[32m   "execution_count": 1,[m
+    "metadata": {[m
+     "ExecuteTime": {[m
+      "end_time": "2019-04-14T03:07:59.332203Z",[m
+[36m@@ -14,6 +14,8 @@[m
+      "name": "stderr",[m
+      "output_type": "stream",[m
+      "text": [[m
+[32m+[m[32m      "/home/jatin/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.\n",[m
+[32m+[m[32m      "  from ._conv import register_converters as _register_converters\n",[m
+       "Using TensorFlow backend.\n"[m
+      ][m
+     }[m
+[36m@@ -42,7 +44,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 88,[m
+[32m+[m[32m   "execution_count": 2,[m
+    "metadata": {[m
+     "ExecuteTime": {[m
+      "end_time": "2019-04-09T22:51:42.038424Z",[m
+[36m@@ -69,7 +71,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 89,[m
+[32m+[m[32m   "execution_count": 3,[m
+    "metadata": {[m
+     "ExecuteTime": {[m
+      "end_time": "2019-04-09T22:51:42.064542Z",[m
+[36m@@ -95,7 +97,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 90,[m
+[32m+[m[32m   "execution_count": 4,[m
+    "metadata": {[m
+     "ExecuteTime": {[m
+      "end_time": "2019-04-09T22:51:42.077601Z",[m
+[36m@@ -116,7 +118,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 91,[m
+[32m+[m[32m   "execution_count": 5,[m
+    "metadata": {[m
+     "ExecuteTime": {[m
+      "end_time": "2019-04-09T22:51:42.088314Z",[m
+[36m@@ -141,7 +143,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 92,[m
+[32m+[m[32m   "execution_count": 6,[m
+    "metadata": {[m
+     "ExecuteTime": {[m
+      "end_time": "2019-04-09T22:51:42.102404Z",[m
+[36m@@ -180,7 +182,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 93,[m
+[32m+[m[32m   "execution_count": 7,[m
+    "metadata": {[m
+     "ExecuteTime": {[m
+      "end_time": "2019-04-09T22:51:42.111657Z",[m
+[36m@@ -212,7 +214,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 94,[m
+[32m+[m[32m   "execution_count": 8,[m
+    "metadata": {[m
+     "ExecuteTime": {[m
+      "end_time": "2019-04-09T22:53:33.010589Z",[m
+[36m@@ -226,24 +228,8 @@[m
+      "text": [[m
+       "(906, 200, 200)\n",[m
+       "(906, 200, 200, 1)\n",[m
+[31m-      "the total number of unique training points are: \n"[m
+[31m-     ][m
+[31m-    },[m
+[31m-    {[m
+[31m-     "data": {[m
+[31m-      "text/plain": [[m
+[31m-       "(array([0., 1., 2., 3., 4., 5., 6., 7.]),\n",[m
+[31m-       " array([583,  44,  17,  59,  24,  69,  27,  83]))"[m
+[31m-      ][m
+[31m-     },[m
+[31m-     "execution_count": 8,[m
+[31m-     "metadata": {},[m
+[31m-     "output_type": "execute_result"[m
+[31m-    },[m
+[31m-    {[m
+[31m-     "name": "stdout",[m
+[31m-     "output_type": "stream",[m
+[31m-     "text": [[m
+[32m+[m[32m      "(906, 1)\n",[m
+[32m+[m[32m      "the total number of unique training points are: \n",[m
+       "{0: 'neutral', 1: 'anger', 2: 'contempt', 3: 'disgust', 4: 'fear', 5: 'happy', 6: 'sadness', 7: 'surprise'}\n"[m
+      ][m
+     }[m
+[36m@@ -281,27 +267,14 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 11,[m
+[32m+[m[32m   "execution_count": 9,[m
+    "metadata": {[m
+     "ExecuteTime": {[m
+      "end_time": "2019-04-09T22:53:33.750423Z",[m
+      "start_time": "2019-04-09T22:53:33.012550Z"[m
+     }[m
+    },[m
+[31m-   "outputs": [[m
+[31m-    {[m
+[31m-     "name": "stdout",[m
+[31m-     "output_type": "stream",[m
+[31m-     "text": [[m
+[31m-      "WARNING:tensorflow:From /Users/visheshhemnani/anaconda3/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.\n",[m
+[31m-      "Instructions for updating:\n",[m
+[31m-      "Colocations handled automatically by placer.\n",[m
+[31m-      "WARNING:tensorflow:From /Users/visheshhemnani/anaconda3/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.\n",[m
+[31m-      "Instructions for updating:\n",[m
+[31m-      "Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.\n"[m
+[31m-     ][m
+[31m-    }[m
+[31m-   ],[m
+[32m+[m[32m   "outputs": [],[m
+    "source": [[m
+     "IMG_SIZE = 200\n",[m
+     "model = Sequential()\n",[m
+[36m@@ -329,7 +302,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 12,[m
+[32m+[m[32m   "execution_count": 10,[m
+    "metadata": {[m
+     "ExecuteTime": {[m
+      "end_time": "2019-04-09T22:53:33.798765Z",[m
+[36m@@ -355,55 +328,52 @@[m
+      "name": "stdout",[m
+      "output_type": "stream",[m
+      "text": [[m
+[31m-      "WARNING:tensorflow:From /Users/visheshhemnani/anaconda3/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.\n",[m
+[31m-      "Instructions for updating:\n",[m
+[31m-      "Use tf.cast instead.\n",[m
+       "Epoch 1/20\n",[m
+[31m-      "906/906 [==============================] - 42s - loss: 4.4602 - acc: 0.6876    \n",[m
+[32m+[m[32m      "906/906 [==============================] - 43s - loss: 4.3200 - acc: 0.6490    \n",[m
+       "Epoch 2/20\n",[m
+[31m-      "906/906 [==============================] - 39s - loss: 4.5872 - acc: 0.7130    \n",[m
+[32m+[m[32m      "906/906 [==============================] - 41s - loss: 3.3538 - acc: 0.7737    \n",[m
+       "Epoch 3/20\n",[m
+[31m-      "906/906 [==============================] - 39s - loss: 4.4924 - acc: 0.7196    \n",[m
+[32m+[m[32m      "906/906 [==============================] - 43s - loss: 3.2717 - acc: 0.7881    \n",[m
+       "Epoch 4/20\n",[m
+[31m-      "906/906 [==============================] - 40s - loss: 4.5030 - acc: 0.7196    \n",[m
+[32m+[m[32m      "906/906 [==============================] - 42s - loss: 3.3096 - acc: 0.7903    \n",[m
+       "Epoch 5/20\n",[m
+[31m-      "906/906 [==============================] - 39s - loss: 4.4120 - acc: 0.7263    \n",[m
+[32m+[m[32m      "906/906 [==============================] - 43s - loss: 3.2527 - acc: 0.7925    \n",[m
+       "Epoch 6/20\n",[m
+[31m-      "906/906 [==============================] - 44s - loss: 4.3942 - acc: 0.7274    \n",[m
+[32m+[m[32m      "906/906 [==============================] - 44s - loss: 3.1895 - acc: 0.7958    \n",[m
+       "Epoch 7/20\n",[m
+[31m-      "906/906 [==============================] - 41s - loss: 4.3942 - acc: 0.7274    \n",[m
+[32m+[m[32m      "906/906 [==============================] - 42s - loss: 3.1644 - acc: 0.7969    \n",[m
+       "Epoch 8/20\n",[m
+[31m-      "906/906 [==============================] - 39s - loss: 4.3944 - acc: 0.7274    \n",[m
+[32m+[m[32m      "906/906 [==============================] - 43s - loss: 2.9420 - acc: 0.8024    \n",[m
+       "Epoch 9/20\n",[m
+[31m-      "906/906 [==============================] - 39s - loss: 4.6648 - acc: 0.7097    \n",[m
+[32m+[m[32m      "906/906 [==============================] - 40s - loss: 3.4274 - acc: 0.7715    \n",[m
+       "Epoch 10/20\n",[m
+[31m-      "906/906 [==============================] - 40s - loss: 4.4489 - acc: 0.7230    \n",[m
+[32m+[m[32m      "906/906 [==============================] - 41s - loss: 2.9934 - acc: 0.8091    \n",[m
+       "Epoch 11/20\n",[m
+[31m-      "906/906 [==============================] - 39s - loss: 4.5608 - acc: 0.7163    \n",[m
+[32m+[m[32m      "906/906 [==============================] - 41s - loss: 2.7174 - acc: 0.8289    \n",[m
+       "Epoch 12/20\n",[m
+[31m-      "906/906 [==============================] - 40s - loss: 4.4161 - acc: 0.7252    \n",[m
+[32m+[m[32m      "906/906 [==============================] - 42s - loss: 2.7806 - acc: 0.8223    \n",[m
+       "Epoch 13/20\n",[m
+[31m-      "906/906 [==============================] - 40s - loss: 4.4252 - acc: 0.7252    \n",[m
+[32m+[m[32m      "906/906 [==============================] - 42s - loss: 2.8090 - acc: 0.8212    \n",[m
+       "Epoch 14/20\n",[m
+[31m-      "906/906 [==============================] - 40s - loss: 4.4655 - acc: 0.7230    \n",[m
+[32m+[m[32m      "906/906 [==============================] - 43s - loss: 2.6578 - acc: 0.8311    \n",[m
+       "Epoch 15/20\n",[m
+[31m-      "906/906 [==============================] - 40s - loss: 4.5221 - acc: 0.7174    \n",[m
+[32m+[m[32m      "906/906 [==============================] - 40s - loss: 2.5479 - acc: 0.8355    \n",[m
+       "Epoch 16/20\n",[m
+[31m-      "906/906 [==============================] - 41s - loss: 4.4886 - acc: 0.7174    \n",[m
+[32m+[m[32m      "906/906 [==============================] - 40s - loss: 2.4510 - acc: 0.8366    \n",[m
+       "Epoch 17/20\n",[m
+[31m-      "906/906 [==============================] - 39s - loss: 4.6061 - acc: 0.7119    \n",[m
+[32m+[m[32m      "906/906 [==============================] - 40s - loss: 2.3440 - acc: 0.8488    \n",[m
+       "Epoch 18/20\n",[m
+[31m-      "906/906 [==============================] - 41s - loss: 4.5087 - acc: 0.7185    \n",[m
+[32m+[m[32m      "906/906 [==============================] - 41s - loss: 2.4095 - acc: 0.8422    \n",[m
+       "Epoch 19/20\n",[m
+[31m-      "906/906 [==============================] - 41s - loss: 4.4314 - acc: 0.7230    \n",[m
+[32m+[m[32m      "906/906 [==============================] - 40s - loss: 2.3441 - acc: 0.8444    \n",[m
+       "Epoch 20/20\n",[m
+[31m-      "906/906 [==============================] - 41s - loss: 4.3053 - acc: 0.7329    \n"[m
+[32m+[m[32m      "906/906 [==============================] - 40s - loss: 2.2617 - acc: 0.8499    \n"[m
+      ][m
+     },[m
+     {[m
+      "data": {[m
+       "text/plain": [[m
+[31m-       "<keras.callbacks.History at 0x1a45f79400>"[m
+[32m+[m[32m       "<keras.callbacks.History at 0x7fd5d422dcf8>"[m
+       ][m
+      },[m
+      "execution_count": 11,[m
+[36m@@ -445,7 +415,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 10,[m
+[32m+[m[32m   "execution_count": 13,[m
+    "metadata": {[m
+     "ExecuteTime": {[m
+      "end_time": "2019-04-14T03:08:22.045267Z",[m
+[36m@@ -487,11 +457,11 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 15,[m
+[32m+[m[32m   "execution_count": 14,[m
+    "metadata": {},[m
+    "outputs": [],[m
+    "source": [[m
+[31m-    "get_webcam_feed()"[m
+[32m+[m[32m    "# get_webcam_feed()"[m
+    ][m
+   },[m
+   {[m
+[36m@@ -503,7 +473,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 98,[m
+[32m+[m[32m   "execution_count": 15,[m
+    "metadata": {},[m
+    "outputs": [[m
+     {[m
+[36m@@ -534,7 +504,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 101,[m
+[32m+[m[32m   "execution_count": 16,[m
+    "metadata": {},[m
+    "outputs": [[m
+     {[m
+[36m@@ -590,7 +560,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": null,[m
+[32m+[m[32m   "execution_count": 17,[m
+    "metadata": {},[m
+    "outputs": [],[m
+    "source": [[m
+[36m@@ -600,38 +570,17 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 105,[m
+[32m+[m[32m   "execution_count": 18,[m
+    "metadata": {},[m
+    "outputs": [[m
+     {[m
+[31m-     "name": "stdout",[m
+[32m+[m[32m     "name": "stderr",[m
+      "output_type": "stream",[m
+      "text": [[m
+[31m-      "[3 7 1 5 7 6 4 1 3 5 7 6 1 5 7 1 3 7 6 1 5 1 1 7 1 4 3 5 7 1 5 7 3 5 7 1 5\n",[m
+[31m-      " 7 6 1 5 7 5 3 3 1 6 7 4 3 4 7 1 5 7 3 7 5 3 7 5 4 7 3 7 3 1 5 4 3 7 5 7 3\n",[m
+[31m-      " 5 7 1 3 7 4 5 7 3 7 5 3 4 7 5 3 7 5 7 5 6 4 7 5 3 7 5 6 1 7 1 5 3 5 7 4 3\n",[m
+[31m-      " 7 3 5 7 5 3 7 6 1 5 3 1 5 7 3 4 7 3 5 7 3 5 1 7 3 5 7 3 7 5 3 7 3 5 7 6 3\n",[m
+[31m-      " 7 6 3 7 1 3 5 7 4 5 7 3 7 5 7 3 5 1 7 3 7 5 1 7 3 1 4 5 7 1 5 6 5 7 5 7 3\n",[m
+[31m-      " 5 6 7 3 5 7 3 5 3 5 7 5 3 7 1 5 7 7 4 3 3 6 3 5 7 3 6 3 5 1 3 5 7 7 1 3 1\n",[m
+[31m-      " 7 6 1 7 5 7 6 5 7 3 5 7 4 1 7 4 1 7 7 4 3 5 6 5 4 7 3 7 1 7 5 1 3 5 7 1 3\n",[m
+[31m-      " 5 7 1 6 3 5 7 6 5 3 6 4 3 5 7 1 7 5 1 5 3 7 5 7 6 1 5 7 6 5 4 7 5 6 2 2 2\n",[m
+[31m-      " 2 2 2 2 2 2 2 2 2 1 4 6 1 2 4 1 2 6 1 2 4 6 2 6 1 2 4 0 0 0 0 0 0 0 0 0 0\n",[m
+[31m-      " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n",[m
+[31m-      " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n",[m
+[31m-      " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n",[m
+[31m-      " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n",[m
+[31m-      " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n",[m
+[31m-      " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n",[m
+[31m-      " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n",[m
+[31m-      " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n",[m
+[31m-      " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n",[m
+[31m-      " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n",[m
+[31m-      " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n",[m
+[31m-      " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n",[m
+[31m-      " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n",[m
+[31m-      " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n",[m
+[31m-      " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n",[m
+[31m-      " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]\n"[m
+[32m+[m[32m      "/home/jatin/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:219: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().\n",[m
+[32m+[m[32m      "  y = column_or_1d(y, warn=True)\n",[m
+[32m+[m[32m      "/home/jatin/anaconda3/lib/python3.6/site-packages/sklearn/preprocessing/label.py:252: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples, ), for example using ravel().\n",[m
+[32m+[m[32m      "  y = column_or_1d(y, warn=True)\n"[m
+      ][m
+     }[m
+    ],[m
+[36m@@ -647,7 +596,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 107,[m
+[32m+[m[32m   "execution_count": 19,[m
+    "metadata": {},[m
+    "outputs": [],[m
+    "source": [[m
+[36m@@ -658,36 +607,9 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 109,[m
+[32m+[m[32m   "execution_count": null,[m
+    "metadata": {},[m
+[31m-   "outputs": [[m
+[31m-    {[m
+[31m-     "name": "stderr",[m
+[31m-     "output_type": "stream",[m
+[31m-     "text": [[m
+[31m-      "/home/jatin/anaconda3/lib/python3.6/site-packages/sklearn/model_selection/_search.py:841: DeprecationWarning: The default of the `iid` parameter will change from True to False in version 0.22 and will be removed in 0.24. This will change numeric results when test-set sizes are unequal.\n",[m
+[31m-      "  DeprecationWarning)\n"[m
+[31m-     ][m
+[31m-    },[m
+[31m-    {[m
+[31m-     "data": {[m
+[31m-      "text/plain": [[m
+[31m-       "GridSearchCV(cv=5, error_score='raise-deprecating',\n",[m
+[31m-       "       estimator=SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,\n",[m
+[31m-       "  decision_function_shape='ovr', degree=3, gamma='auto_deprecated',\n",[m
+[31m-       "  kernel='rbf', max_iter=-1, probability=False, random_state=None,\n",[m
+[31m-       "  shrinking=True, tol=0.001, verbose=False),\n",[m
+[31m-       "       fit_params=None, iid='warn', n_jobs=None,\n",[m
+[31m-       "       param_grid=[{'kernel': ['rbf'], 'gamma': [0.001, 0.0001], 'C': [1, 10, 100, 1000]}, {'kernel': ['linear'], 'C': [1, 10, 100, 1000]}],\n",[m
+[31m-       "       pre_dispatch='2*n_jobs', refit=True, return_train_score='warn',\n",[m
+[31m-       "       scoring=None, verbose=0)"[m
+[31m-      ][m
+[31m-     },[m
+[31m-     "execution_count": 109,[m
+[31m-     "metadata": {},[m
+[31m-     "output_type": "execute_result"[m
+[31m-    }[m
+[31m-   ],[m
+[32m+[m[32m   "outputs": [],[m
+    "source": [[m
+     "svm_model = GridSearchCV(SVC(), params_grid, cv=5)\n",[m
+     "svm_model.fit(X_train_new, y_train_new)"[m
+[36m@@ -695,23 +617,9 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 111,[m
+[32m+[m[32m   "execution_count": null,[m
+    "metadata": {},[m
+[31m-   "outputs": [[m
+[31m-    {[m
+[31m-     "name": "stdout",[m
+[31m-     "output_type": "stream",[m
+[31m-     "text": [[m
+[31m-      "Best score for training data: 0.8167770419426048 \n",[m
+[31m-      "\n",[m
+[31m-      "Best C: 1 \n",[m
+[31m-      "\n",[m
+[31m-      "Best Kernel: linear \n",[m
+[31m-      "\n",[m
+[31m-      "Best Gamma: auto_deprecated \n",[m
+[31m-      "\n"[m
+[31m-     ][m
+[31m-    }],[m
+[32m+[m[32m   "outputs": [],[m
+    "source": [[m
+     "# View the accuracy score\n",[m
+     "print('Best score for training data:', svm_model.best_score_,\"\\n\") \n",[m
+[36m@@ -724,27 +632,16 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 115,[m
+[32m+[m[32m   "execution_count": null,[m
+    "metadata": {},[m
+[31m-   "outputs": [[m
+[31m-    {[m
+[31m-     "data": {[m
+[31m-      "text/plain": [[m
+[31m-       "array([3])"[m
+[31m-      ][m
+[31m-     },[m
+[31m-     "execution_count": 115,[m
+[31m-     "metadata": {},[m
+[31m-     "output_type": "execute_result"[m
+[31m-    }[m
+[31m-   ],[m
+[32m+[m[32m   "outputs": [],[m
+    "source": [[m
+     "svm_model.predict(X_train_new[0].reshape(1,40000))"[m
+    ][m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 117,[m
+[32m+[m[32m   "execution_count": null,[m
+    "metadata": {},[m
+    "outputs": [],[m
+    "source": [[m
+[36m@@ -761,7 +658,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 124,[m
+[32m+[m[32m   "execution_count": null,[m
+    "metadata": {},[m
+    "outputs": [],[m
+    "source": [[m
+[36m@@ -799,11 +696,11 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 125,[m
+[32m+[m[32m   "execution_count": null,[m
+    "metadata": {},[m
+    "outputs": [],[m
+    "source": [[m
+[31m-    "new_get_webcam_feed()"[m
+[32m+[m[32m    "# new_get_webcam_feed()"[m
+    ][m
+   },[m
+   {[m
+[36m@@ -830,7 +727,7 @@[m
+    "name": "python",[m
+    "nbconvert_exporter": "python",[m
+    "pygments_lexer": "ipython3",[m
+[31m-   "version": "3.6.4"[m
+[32m+[m[32m   "version": "3.6.5"[m
+   }[m
+  },[m
+  "nbformat": 4,[m
+[1mdiff --git a/Testing DLib.ipynb b/Testing DLib.ipynb[m
+[1mindex fdb7a0f..1a37ae1 100644[m
+[1m--- a/Testing DLib.ipynb[m	
+[1m+++ b/Testing DLib.ipynb[m	
+[36m@@ -2,7 +2,7 @@[m
+  "cells": [[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": null,[m
+[32m+[m[32m   "execution_count": 4,[m
+    "metadata": {[m
+     "ExecuteTime": {[m
+      "start_time": "2019-04-14T03:21:51.203Z"[m
+[36m@@ -13,27616 +13,29980 @@[m
+      "name": "stdout",[m
+      "output_type": "stream",[m
+      "text": [[m
+[31m-      "True\n"[m
+[32m+[m[32m      "True\n",[m
+[32m+[m[32m      "Adding fearures 327 241\n",[m
+[32m+[m[32m      "Adding fearures 328 266\n",[m
+[32m+[m[32m      "Adding fearures 329 290\n",[m
+[32m+[m[32m      "Adding fearures 333 313\n",[m
+[32m+[m[32m      "Adding fearures 345 333\n",[m
+[32m+[m[32m      "Adding fearures 362 351\n",[m
+[32m+[m[32m      "Adding fearures 382 365\n",[m
+[32m+[m[32m      "Adding fearures 403 376\n",[m
+[32m+[m[32m      "Adding fearures 426 379\n",[m
+[32m+[m[32m      "Adding fearures 448 376\n",[m
+[32m+[m[32m      "Adding fearures 465 362\n",[m
+[32m+[m[32m      "Adding fearures 481 348\n",[m
+[32m+[m[32m      "Adding fearures 493 330\n",[m
+[32m+[m[32m      "Adding fearures 501 309\n",[m
+[32m+[m[32m      "Adding fearures 503 287\n",[m
+[32m+[m[32m      "Adding fearures 504 266\n",[m
+[32m+[m[32m      "Adding fearures 505 244\n",[m
+[32m+[m[32m      "Adding fearures 346 226\n",[m
+[32m+[m[32m      "Adding fearures 359 215\n",[m
+[32m+[m[32m      "Adding fearures 378 212\n",[m
+[32m+[m[32m      "Adding fearures 396 214\n",[m
+[32m+[m[32m      "Adding fearures 412 222\n",[m
+[32m+[m[32m      "Adding fearures 436 224\n",[m
+[32m+[m[32m      "Adding fearures 452 218\n",[m
+[32m+[m[32m      "Adding fearures 469 217\n",[m
+[32m+[m[32m      "Adding fearures 485 220\n",[m
+[32m+[m[32m      "Adding fearures 495 232\n",[m
+[32m+[m[32m      "Adding fearures 425 240\n",[m
+[32m+[m[32m      "Adding fearures 426 255\n",[m
+[32m+[m[32m      "Adding fearures 427 270\n",[m
+[32m+[m[32m      "Adding fearures 429 286\n",[m
+[32m+[m[32m      "Adding fearures 406 294\n",[m
+[32m+[m[32m      "Adding fearures 416 297\n",[m
+[32m+[m[32m      "Adding fearures 427 301\n",[m
+[32m+[m[32m      "Adding fearures 436 298\n",[m
+[32m+[m[32m      "Adding fearures 445 295\n",[m
+[32m+[m[32m      "Adding fearures 367 242\n",[m
+[32m+[m[32m      "Adding fearures 377 237\n",[m
+[32m+[m[32m      "Adding fearures 389 237\n",[m
+[32m+[m[32m      "Adding fearures 399 244\n",[m
+[32m+[m[32m      "Adding fearures 388 246\n",[m
+[32m+[m[32m      "Adding fearures 376 246\n",[m
+[32m+[m[32m      "Adding fearures 445 246\n",[m
+[32m+[m[32m      "Adding fearures 455 239\n",[m
+[32m+[m[32m      "Adding fearures 467 240\n",[m
+[32m+[m[32m      "Adding fearures 477 245\n",[m
+[32m+[m[32m      "Adding fearures 467 249\n",[m
+[32m+[m[32m      "Adding fearures 456 248\n",[m
+[32m+[m[32m      "Adding fearures 390 321\n",[m
+[32m+[m[32m      "Adding fearures 403 314\n",[m
+[32m+[m[32m      "Adding fearures 417 312\n",[m
+[32m+[m[32m      "Adding fearures 427 314\n",[m
+[32m+[m[32m      "Adding fearures 436 312\n",[m
+[32m+[m[32m      "Adding fearures 448 316\n",[m
+[32m+[m[32m      "Adding fearures 459 322\n",[m
+[32m+[m[32m      "Adding fearures 448 333\n",[m
+[32m+[m[32m      "Adding fearures 437 338\n",[m
+[32m+[m[32m      "Adding fearures 427 339\n",[m
+[32m+[m[32m      "Adding fearures 416 337\n",[m
+[32m+[m[32m      "Adding fearures 403 331\n",[m
+[32m+[m[32m      "Adding fearures 396 321\n",[m
+[32m+[m[32m      "Adding fearures 416 321\n",[m
+[32m+[m[32m      "Adding fearures 426 322\n",[m
+[32m+[m[32m      "Adding fearures 436 321\n",[m
+[32m+[m[32m      "Adding fearures 453 323\n",[m
+[32m+[m[32m      "Adding fearures 436 323\n",[m
+[32m+[m[32m      "Adding fearures 427 324\n",[m
+[32m+[m[32m      "Adding fearures 417 322\n",[m
+[32m+[m[32m      "Adding fearures 327 238\n",[m
+[32m+[m[32m      "Adding fearures 327 264\n",[m
+[32m+[m[32m      "Adding fearures 329 288\n",[m
+[32m+[m[32m      "Adding fearures 333 311\n",[m
+[32m+[m[32m      "Adding fearures 345 332\n",[m
+[32m+[m[32m      "Adding fearures 362 350\n",[m
+[32m+[m[32m      "Adding fearures 382 364\n",[m
+[32m+[m[32m      "Adding fearures 403 375\n",[m
+[32m+[m[32m      "Adding fearures 427 377\n",[m
+[32m+[m[32m      "Adding fearures 448 374\n",[m
+[32m+[m[32m      "Adding fearures 466 361\n",[m
+[32m+[m[32m      "Adding fearures 481 346\n",[m
+[32m+[m[32m      "Adding fearures 493 328\n",[m
+[32m+[m[32m      "Adding fearures 500 308\n",[m
+[32m+[m[32m      "Adding fearures 502 286\n",[m
+[32m+[m[32m      "Adding fearures 504 264\n",[m
+[32m+[m[32m      "Adding fearures 504 241\n",[m
+[32m+[m[32m      "Adding fearures 345 225\n",[m
+[32m+[m[32m      "Adding fearures 360 214\n",[m
+[32m+[m[32m      "Adding fearures 378 211\n",[m
+[32m+[m[32m      "Adding fearures 396 214\n",[m
+[32m+[m[32m      "Adding fearures 413 222\n",[m
+[32m+[m[32m      "Adding fearures 436 223\n",[m
+[32m+[m[32m      "Adding fearures 452 218\n",[m
+[32m+[m[32m      "Adding fearures 469 216\n",[m
+[32m+[m[32m      "Adding fearures 485 219\n",[m
+[32m+[m[32m      "Adding fearures 496 231\n",[m
+[32m+[m[32m      "Adding fearures 425 239\n",[m
+[32m+[m[32m      "Adding fearures 426 254\n",[m
+[32m+[m[32m      "Adding fearures 428 269\n",[m
+[32m+[m[32m      "Adding fearures 429 285\n",[m
+[32m+[m[32m      "Adding fearures 407 293\n",[m
+[32m+[m[32m      "Adding fearures 417 296\n",[m
+[32m+[m[32m      "Adding fearures 427 299\n",[m
+[32m+[m[32m      "Adding fearures 437 296\n",[m
+[32m+[m[32m      "Adding fearures 445 293\n",[m
+[32m+[m[32m      "Adding fearures 367 241\n",[m
+[32m+[m[32m      "Adding fearures 377 236\n",[m
+[32m+[m[32m      "Adding fearures 389 236\n",[m
+[32m+[m[32m      "Adding fearures 399 242\n",[m
+[32m+[m[32m      "Adding fearures 388 245\n",[m
+[32m+[m[32m      "Adding fearures 377 245\n",[m
+[32m+[m[32m      "Adding fearures 445 244\n",[m
+[32m+[m[32m      "Adding fearures 456 238\n",[m
+[32m+[m[32m      "Adding fearures 467 239\n",[m
+[32m+[m[32m      "Adding fearures 477 244\n",[m
+[32m+[m[32m      "Adding fearures 468 248\n",[m
+[32m+[m[32m      "Adding fearures 456 247\n",[m
+[32m+[m[32m      "Adding fearures 390 319\n",[m
+[32m+[m[32m      "Adding fearures 403 313\n",[m
+[32m+[m[32m      "Adding fearures 417 311\n",[m
+[32m+[m[32m      "Adding fearures 427 313\n",[m
+[32m+[m[32m      "Adding fearures 436 311\n",[m
+[32m+[m[32m      "Adding fearures 449 314\n",[m
+[32m+[m[32m      "Adding fearures 460 320\n",[m
+[32m+[m[32m      "Adding fearures 450 331\n",[m
+[32m+[m[32m      "Adding fearures 438 336\n",[m
+[32m+[m[32m      "Adding fearures 427 337\n",[m
+[32m+[m[32m      "Adding fearures 417 336\n",[m
+[32m+[m[32m      "Adding fearures 403 330\n",[m
+[32m+[m[32m      "Adding fearures 396 320\n",[m
+[32m+[m[32m      "Adding fearures 417 319\n",[m
+[32m+[m[32m      "Adding fearures 427 321\n",[m
+[32m+[m[32m      "Adding fearures 436 320\n",[m
+[32m+[m[32m      "Adding fearures 454 321\n",[m
+[32m+[m[32m      "Adding fearures 437 322\n",[m
+[32m+[m[32m      "Adding fearures 427 323\n",[m
+[32m+[m[32m      "Adding fearures 417 321\n",[m
+[32m+[m[32m      "Adding fearures 327 238\n",[m
+[32m+[m[32m      "Adding fearures 328 263\n",[m
+[32m+[m[32m      "Adding fearures 329 287\n",[m
+[32m+[m[32m      "Adding fearures 334 311\n",[m
+[32m+[m[32m      "Adding fearures 345 331\n",[m
+[32m+[m[32m      "Adding fearures 363 349\n",[m
+[32m+[m[32m      "Adding fearures 383 363\n",[m
+[32m+[m[32m      "Adding fearures 403 375\n",[m
+[32m+[m[32m      "Adding fearures 426 378\n",[m
+[32m+[m[32m      "Adding fearures 449 374\n",[m
+[32m+[m[32m      "Adding fearures 466 361\n",[m
+[32m+[m[32m      "Adding fearures 482 346\n",[m
+[32m+[m[32m      "Adding fearures 494 328\n",[m
+[32m+[m[32m      "Adding fearures 500 308\n",[m
+[32m+[m[32m      "Adding fearures 503 285\n",[m
+[32m+[m[32m      "Adding fearures 504 263\n",[m
+[32m+[m[32m      "Adding fearures 504 241\n",[m
+[32m+[m[32m      "Adding fearures 346 224\n",[m
+[32m+[m[32m      "Adding fearures 360 213\n",[m
+[32m+[m[32m      "Adding fearures 378 210\n",[m
+[32m+[m[32m      "Adding fearures 397 213\n",[m
+[32m+[m[32m      "Adding fearures 413 221\n",[m
+[32m+[m[32m      "Adding fearures 436 222\n",[m
+[32m+[m[32m      "Adding fearures 452 216\n",[m
+[32m+[m[32m      "Adding fearures 469 215\n",[m
+[32m+[m[32m      "Adding fearures 485 218\n",[m
+[32m+[m[32m      "Adding fearures 496 230\n",[m
+[32m+[m[32m      "Adding fearures 426 239\n",[m
+[32m+[m[32m      "Adding fearures 426 254\n",[m
+[32m+[m[32m      "Adding fearures 427 269\n",[m
+[32m+[m[32m      "Adding fearures 429 284\n",[m
+[32m+[m[32m      "Adding fearures 406 292\n",[m
+[32m+[m[32m      "Adding fearures 417 296\n",[m
+[32m+[m[32m      "Adding fearures 427 299\n",[m
+[32m+[m[32m      "Adding fearures 436 296\n",[m
+[32m+[m[32m      "Adding fearures 445 293\n",[m
+[32m+[m[32m      "Adding fearures 367 239\n",[m
+[32m+[m[32m      "Adding fearures 378 235\n",[m
+[32m+[m[32m      "Adding fearures 389 235\n",[m
+[32m+[m[32m      "Adding fearures 400 242\n",[m
+[32m+[m[32m      "Adding fearures 389 244\n",[m
+[32m+[m[32m      "Adding fearures 377 243\n",[m
+[32m+[m[32m      "Adding fearures 445 244\n",[m
+[32m+[m[32m      "Adding fearures 456 237\n",[m
+[32m+[m[32m      "Adding fearures 468 238\n",[m
+[32m+[m[32m      "Adding fearures 477 244\n",[m
+[32m+[m[32m      "Adding fearures 468 247\n",[m
+[32m+[m[32m      "Adding fearures 456 247\n",[m
+[32m+[m[32m      "Adding fearures 390 319\n",[m
+[32m+[m[32m      "Adding fearures 404 313\n",[m
+[32m+[m[32m      "Adding fearures 417 310\n",[m
+[32m+[m[32m      "Adding fearures 427 313\n",[m
+[32m+[m[32m      "Adding fearures 436 311\n",[m
+[32m+[m[32m      "Adding fearures 448 314\n",[m
+[32m+[m[32m      "Adding fearures 459 320\n",[m
+[32m+[m[32m      "Adding fearures 449 331\n",[m
+[32m+[m[32m      "Adding fearures 437 337\n",[m
+[32m+[m[32m      "Adding fearures 427 337\n",[m
+[32m+[m[32m      "Adding fearures 417 336\n",[m
+[32m+[m[32m      "Adding fearures 404 330\n",[m
+[32m+[m[32m      "Adding fearures 396 320\n",[m
+[32m+[m[32m      "Adding fearures 417 319\n",[m
+[32m+[m[32m      "Adding fearures 427 320\n",[m
+[32m+[m[32m      "Adding fearures 436 320\n",[m
+[32m+[m[32m      "Adding fearures 453 321\n",[m
+[32m+[m[32m      "Adding fearures 436 321\n",[m
+[32m+[m[32m      "Adding fearures 427 322\n",[m
+[32m+[m[32m      "Adding fearures 417 321\n",[m
+[32m+[m[32m      "Adding fearures 327 236\n",[m
+[32m+[m[32m      "Adding fearures 328 262\n",[m
+[32m+[m[32m      "Adding fearures 329 286\n",[m
+[32m+[m[32m      "Adding fearures 333 310\n",[m
+[32m+[m[32m      "Adding fearures 345 331\n",[m
+[32m+[m[32m      "Adding fearures 361 348\n",[m
+[32m+[m[32m      "Adding fearures 382 363\n",[m
+[32m+[m[32m      "Adding fearures 403 374\n",[m
+[32m+[m[32m      "Adding fearures 426 377\n",[m
+[32m+[m[32m      "Adding fearures 448 373\n",[m
+[32m+[m[32m      "Adding fearures 466 360\n",[m
+[32m+[m[32m      "Adding fearures 482 346\n",[m
+[32m+[m[32m      "Adding fearures 493 328\n",[m
+[32m+[m[32m      "Adding fearures 500 308\n",[m
+[32m+[m[32m      "Adding fearures 502 286\n",[m
+[32m+[m[32m      "Adding fearures 504 264\n",[m
+[32m+[m[32m      "Adding fearures 505 241\n",[m
+[32m+[m[32m      "Adding fearures 346 224\n",[m
+[32m+[m[32m      "Adding fearures 360 213\n",[m
+[32m+[m[32m      "Adding fearures 379 210\n",[m
+[32m+[m[32m      "Adding fearures 397 212\n",[m
+[32m+[m[32m      "Adding fearures 414 220\n",[m
+[32m+[m[32m      "Adding fearures 436 222\n",[m
+[32m+[m[32m      "Adding fearures 452 216\n",[m
+[32m+[m[32m      "Adding fearures 469 214\n",[m
+[32m+[m[32m      "Adding fearures 486 218\n",[m
+[32m+[m[32m      "Adding fearures 497 229\n",[m
+[32m+[m[32m      "Adding fearures 426 238\n",[m
+[32m+[m[32m      "Adding fearures 427 253\n",[m
+[32m+[m[32m      "Adding fearures 428 268\n",[m
+[32m+[m[32m      "Adding fearures 429 284\n",[m
+[32m+[m[32m      "Adding fearures 407 292\n",[m
+[32m+[m[32m      "Adding fearures 417 295\n",[m
+[32m+[m[32m      "Adding fearures 428 299\n",[m
+[32m+[m[32m      "Adding fearures 437 296\n",[m
+[32m+[m[32m      "Adding fearures 446 293\n",[m
+[32m+[m[32m      "Adding fearures 368 239\n",[m
+[32m+[m[32m      "Adding fearures 378 234\n",[m
+[32m+[m[32m      "Adding fearures 390 235\n",[m
+[32m+[m[32m      "Adding fearures 400 242\n",[m
+[32m+[m[32m      "Adding fearures 389 243\n",[m
+[32m+[m[32m      "Adding fearures 377 243\n",[m
+[32m+[m[32m      "Adding fearures 446 244\n",[m
+[32m+[m[32m      "Adding fearures 457 237\n",[m
+[32m+[m[32m      "Adding fearures 468 238\n",[m
+[32m+[m[32m      "Adding fearures 478 243\n",[m
+[32m+[m[32m      "Adding fearures 468 247\n",[m
+[32m+[m[32m      "Adding fearures 457 246\n",[m
+[32m+[m[32m      "Adding fearures 390 318\n",[m
+[32m+[m[32m      "Adding fearures 403 312\n",[m
+[32m+[m[32m      "Adding fearures 417 309\n",[m
+[32m+[m[32m      "Adding fearures 427 312\n",[m
+[32m+[m[32m      "Adding fearures 437 310\n",[m
+[32m+[m[32m      "Adding fearures 449 313\n",[m
+[32m+[m[32m      "Adding fearures 460 319\n",[m
+[32m+[m[32m      "Adding fearures 449 331\n",[m
+[32m+[m[32m      "Adding fearures 438 336\n",[m
+[32m+[m[32m      "Adding fearures 427 337\n",[m
+[32m+[m[32m      "Adding fearures 417 335\n",[m
+[32m+[m[32m      "Adding fearures 403 329\n",[m
+[32m+[m[32m      "Adding fearures 396 319\n",[m
+[32m+[m[32m      "Adding fearures 417 318\n",[m
+[32m+[m[32m      "Adding fearures 427 319\n",[m
+[32m+[m[32m      "Adding fearures 437 319\n",[m
+[32m+[m[32m      "Adding fearures 454 320\n",[m
+[32m+[m[32m      "Adding fearures 437 321\n",[m
+[32m+[m[32m      "Adding fearures 427 322\n",[m
+[32m+[m[32m      "Adding fearures 417 320\n",[m
+[32m+[m[32m      "Adding fearures 328 238\n",[m
+[32m+[m[32m      "Adding fearures 329 263\n",[m
+[32m+[m[32m      "Adding fearures 330 287\n",[m
+[32m+[m[32m      "Adding fearures 334 311\n",[m
+[32m+[m[32m      "Adding fearures 345 331\n",[m
+[32m+[m[32m      "Adding fearures 362 349\n",[m
+[32m+[m[32m      "Adding fearures 383 363\n",[m
+[32m+[m[32m      "Adding fearures 403 375\n",[m
+[32m+[m[32m      "Adding fearures 427 377\n",[m
+[32m+[m[32m      "Adding fearures 449 374\n",[m
+[32m+[m[32m      "Adding fearures 466 361\n",[m
+[32m+[m[32m      "Adding fearures 482 346\n",[m
+[32m+[m[32m      "Adding fearures 494 328\n",[m
+[32m+[m[32m      "Adding fearures 500 308\n",[m
+[32m+[m[32m      "Adding fearures 503 286\n",[m
+[32m+[m[32m      "Adding fearures 504 264\n",[m
+[32m+[m[32m      "Adding fearures 504 242\n",[m
+[32m+[m[32m      "Adding fearures 346 224\n",[m
+[32m+[m[32m      "Adding fearures 360 213\n",[m
+[32m+[m[32m      "Adding fearures 379 210\n",[m
+[32m+[m[32m      "Adding fearures 397 212\n",[m
+[32m+[m[32m      "Adding fearures 413 220\n",[m
+[32m+[m[32m      "Adding fearures 436 222\n",[m
+[32m+[m[32m      "Adding fearures 453 216\n",[m
+[32m+[m[32m      "Adding fearures 469 214\n",[m
+[32m+[m[32m      "Adding fearures 486 218\n",[m
+[32m+[m[32m      "Adding fearures 497 229\n",[m
+[32m+[m[32m      "Adding fearures 426 238\n",[m
+[32m+[m[32m      "Adding fearures 427 253\n",[m
+[32m+[m[32m      "Adding fearures 428 268\n",[m
+[32m+[m[32m      "Adding fearures 429 284\n",[m
+[32m+[m[32m      "Adding fearures 407 292\n",[m
+[32m+[m[32m      "Adding fearures 417 295\n",[m
+[32m+[m[32m      "Adding fearures 427 299\n",[m
+[32m+[m[32m      "Adding fearures 437 296\n",[m
+[32m+[m[32m      "Adding fearures 445 293\n",[m
+[32m+[m[32m      "Adding fearures 367 240\n",[m
+[32m+[m[32m      "Adding fearures 378 234\n",[m
+[32m+[m[32m      "Adding fearures 390 235\n",[m
+[32m+[m[32m      "Adding fearures 400 242\n",[m
+[32m+[m[32m      "Adding fearures 389 244\n",[m
+[32m+[m[32m      "Adding fearures 377 244\n",[m
+[32m+[m[32m      "Adding fearures 445 244\n",[m
+[32m+[m[32m      "Adding fearures 456 237\n",[m
+[32m+[m[32m      "Adding fearures 468 238\n",[m
+[32m+[m[32m      "Adding fearures 478 243\n",[m
+[32m+[m[32m      "Adding fearures 469 247\n",[m
+[32m+[m[32m      "Adding fearures 457 247\n",[m
+[32m+[m[32m      "Adding fearures 390 319\n",[m
+[32m+[m[32m      "Adding fearures 404 312\n",[m
+[32m+[m[32m      "Adding fearures 418 309\n",[m
+[32m+[m[32m      "Adding fearures 427 312\n",[m
+[32m+[m[32m      "Adding fearures 437 309\n",[m
+[32m+[m[32m      "Adding fearures 450 313\n",[m
+[32m+[m[32m      "Adding fearures 460 320\n",[m
+[32m+[m[32m      "Adding fearures 450 332\n",[m
+[32m+[m[32m      "Adding fearures 439 337\n",[m
+[32m+[m[32m      "Adding fearures 428 338\n",[m
+[32m+[m[32m      "Adding fearures 417 337\n",[m
+[32m+[m[32m      "Adding fearures 404 331\n",[m
+[32m+[m[32m      "Adding fearures 396 320\n",[m
+[32m+[m[32m      "Adding fearures 417 319\n",[m
+[32m+[m[32m      "Adding fearures 427 320\n",[m
+[32m+[m[32m      "Adding fearures 437 319\n",[m
+[32m+[m[32m      "Adding fearures 455 321\n",[m
+[32m+[m[32m      "Adding fearures 438 322\n",[m
+[32m+[m[32m      "Adding fearures 428 323\n",[m
+[32m+[m[32m      "Adding fearures 418 321\n",[m
+[32m+[m[32m      "Adding fearures 328 240\n",[m
+[32m+[m[32m      "Adding fearures 328 265\n",[m
+[32m+[m[32m      "Adding fearures 330 289\n",[m
+[32m+[m[32m      "Adding fearures 334 312\n",[m
+[32m+[m[32m      "Adding fearures 345 332\n",[m
+[32m+[m[32m      "Adding fearures 362 350\n",[m
+[32m+[m[32m      "Adding fearures 382 364\n",[m
+[32m+[m[32m      "Adding fearures 403 375\n",[m
+[32m+[m[32m      "Adding fearures 426 378\n",[m
+[32m+[m[32m      "Adding fearures 448 374\n",[m
+[32m+[m[32m      "Adding fearures 465 361\n",[m
+[32m+[m[32m      "Adding fearures 481 347\n",[m
+[32m+[m[32m      "Adding fearures 494 330\n",[m
+[32m+[m[32m      "Adding fearures 501 309\n",[m
+[32m+[m[32m      "Adding fearures 503 287\n",[m
+[32m+[m[32m      "Adding fearures 505 265\n",[m
+[32m+[m[32m      "Adding fearures 505 244\n",[m
+[32m+[m[32m      "Adding fearures 347 224\n",[m
+[32m+[m[32m      "Adding fearures 361 213\n",[m
+[32m+[m[32m      "Adding fearures 379 210\n",[m
+[32m+[m[32m      "Adding fearures 397 213\n",[m
+[32m+[m[32m      "Adding fearures 413 220\n",[m
+[32m+[m[32m      "Adding fearures 437 222\n",[m
+[32m+[m[32m      "Adding fearures 453 216\n",[m
+[32m+[m[32m      "Adding fearures 469 215\n",[m
+[32m+[m[32m      "Adding fearures 486 218\n",[m
+[32m+[m[32m      "Adding fearures 496 230\n",[m
+[32m+[m[32m      "Adding fearures 426 238\n",[m
+[32m+[m[32m      "Adding fearures 427 254\n",[m
+[32m+[m[32m      "Adding fearures 428 269\n",[m
+[32m+[m[32m      "Adding fearures 429 285\n",[m
+[32m+[m[32m      "Adding fearures 406 292\n",[m
+[32m+[m[32m      "Adding fearures 417 296\n",[m
+[32m+[m[32m      "Adding fearures 427 299\n",[m
+[32m+[m[32m      "Adding fearures 436 296\n",[m
+[32m+[m[32m      "Adding fearures 445 293\n",[m
+[32m+[m[32m      "Adding fearures 368 240\n",[m
+[32m+[m[32m      "Adding fearures 378 235\n",[m
+[32m+[m[32m      "Adding fearures 390 235\n",[m
+[32m+[m[32m      "Adding fearures 400 242\n",[m
+[32m+[m[32m      "Adding fearures 389 244\n",[m
+[32m+[m[32m      "Adding fearures 377 244\n",[m
+[32m+[m[32m      "Adding fearures 446 244\n",[m
+[32m+[m[32m      "Adding fearures 457 237\n",[m
+[32m+[m[32m      "Adding fearures 468 238\n",[m
+[32m+[m[32m      "Adding fearures 478 244\n",[m
+[32m+[m[32m      "Adding fearures 469 248\n",[m
+[32m+[m[32m      "Adding fearures 457 247\n",[m
+[32m+[m[32m      "Adding fearures 390 320\n",[m
+[32m+[m[32m      "Adding fearures 404 313\n",[m
+[32m+[m[32m      "Adding fearures 417 310\n",[m
+[32m+[m[32m      "Adding fearures 427 313\n",[m
+[32m+[m[32m      "Adding fearures 436 311\n",[m
+[32m+[m[32m      "Adding fearures 448 314\n",[m
+[32m+[m[32m      "Adding fearures 459 321\n",[m
+[32m+[m[32m      "Adding fearures 448 331\n",[m
+[32m+[m[32m      "Adding fearures 437 335\n",[m
+[32m+[m[32m      "Adding fearures 427 336\n",[m
+[32m+[m[32m      "Adding fearures 417 335\n",[m
+[32m+[m[32m      "Adding fearures 403 330\n",[m
+[32m+[m[32m      "Adding fearures 396 320\n",[m
+[32m+[m[32m      "Adding fearures 417 319\n",[m
+[32m+[m[32m      "Adding fearures 427 320\n",[m
+[32m+[m[32m      "Adding fearures 436 320\n",[m
+[32m+[m[32m      "Adding fearures 453 321\n",[m
+[32m+[m[32m      "Adding fearures 436 321\n",[m
+[32m+[m[32m      "Adding fearures 427 322\n",[m
+[32m+[m[32m      "Adding fearures 417 321\n",[m
+[32m+[m[32m      "Adding fearures 328 239\n",[m
+[32m+[m[32m      "Adding fearures 328 264\n",[m
+[32m+[m[32m      "Adding fearures 330 288\n",[m
+[32m+[m[32m      "Adding fearures 334 311\n",[m
+[32m+[m[32m      "Adding fearures 345 332\n",[m
+[32m+[m[32m      "Adding fearures 362 349\n",[m
+[32m+[m[32m      "Adding fearures 382 363\n",[m
+[32m+[m[32m      "Adding fearures 403 375\n",[m
+[32m+[m[32m      "Adding fearures 426 378\n",[m
+[32m+[m[32m      "Adding fearures 448 374\n",[m
+[32m+[m[32m      "Adding fearures 466 362\n",[m
+[32m+[m[32m      "Adding fearures 482 347\n",[m
+[32m+[m[32m      "Adding fearures 493 329\n",[m
+[32m+[m[32m      "Adding fearures 500 309\n",[m
+[32m+[m[32m      "Adding fearures 503 287\n",[m
+[32m+[m[32m      "Adding fearures 504 265\n",[m
+[32m+[m[32m      "Adding fearures 505 243\n",[m
+[32m+[m[32m      "Adding fearures 345 224\n",[m
+[32m+[m[32m      "Adding fearures 359 213\n",[m
+[32m+[m[32m      "Adding fearures 378 210\n",[m
+[32m+[m[32m      "Adding fearures 396 213\n",[m
+[32m+[m[32m      "Adding fearures 413 220\n",[m
+[32m+[m[32m      "Adding fearures 436 221\n",[m
+[32m+[m[32m      "Adding fearures 453 216\n",[m
+[32m+[m[32m      "Adding fearures 470 214\n",[m
+[32m+[m[32m      "Adding fearures 486 218\n",[m
+[32m+[m[32m      "Adding fearures 497 230\n",[m
+[32m+[m[32m      "Adding fearures 426 238\n",[m
+[32m+[m[32m      "Adding fearures 427 253\n",[m
+[32m+[m[32m      "Adding fearures 428 268\n",[m
+[32m+[m[32m      "Adding fearures 429 284\n",[m
+[32m+[m[32m      "Adding fearures 407 292\n",[m
+[32m+[m[32m      "Adding fearures 417 295\n",[m
+[32m+[m[32m      "Adding fearures 428 299\n",[m
+[32m+[m[32m      "Adding fearures 437 296\n",[m
+[32m+[m[32m      "Adding fearures 446 293\n",[m
+[32m+[m[32m      "Adding fearures 368 239\n",[m
+[32m+[m[32m      "Adding fearures 378 234\n",[m
+[32m+[m[32m      "Adding fearures 390 235\n",[m
+[32m+[m[32m      "Adding fearures 400 242\n",[m
+[32m+[m[32m      "Adding fearures 389 244\n",[m
+[32m+[m[32m      "Adding fearures 377 243\n",[m
+[32m+[m[32m      "Adding fearures 446 244\n",[m
+[32m+[m[32m      "Adding fearures 456 237\n",[m
+[32m+[m[32m      "Adding fearures 468 238\n",[m
+[32m+[m[32m      "Adding fearures 478 243\n",[m
+[32m+[m[32m      "Adding fearures 469 247\n",[m
+[32m+[m[32m      "Adding fearures 457 247\n",[m
+[32m+[m[32m      "Adding fearures 390 319\n",[m
+[32m+[m[32m      "Adding fearures 404 312\n",[m
+[32m+[m[32m      "Adding fearures 417 309\n",[m
+[32m+[m[32m      "Adding fearures 428 312\n",[m
+[32m+[m[32m      "Adding fearures 437 310\n",[m
+[32m+[m[32m      "Adding fearures 450 313\n",[m
+[32m+[m[32m      "Adding fearures 461 320\n",[m
+[32m+[m[32m      "Adding fearures 450 331\n",[m
+[32m+[m[32m      "Adding fearures 438 336\n",[m
+[32m+[m[32m      "Adding fearures 428 337\n",[m
+[32m+[m[32m      "Adding fearures 417 335\n",[m
+[32m+[m[32m      "Adding fearures 403 330\n",[m
+[32m+[m[32m      "Adding fearures 396 319\n",[m
+[32m+[m[32m      "Adding fearures 417 318\n",[m
+[32m+[m[32m      "Adding fearures 427 320\n",[m
+[32m+[m[32m      "Adding fearures 437 319\n",[m
+[32m+[m[32m      "Adding fearures 455 321\n",[m
+[32m+[m[32m      "Adding fearures 438 321\n",[m
+[32m+[m[32m      "Adding fearures 428 322\n",[m
+[32m+[m[32m      "Adding fearures 417 320\n",[m
+[32m+[m[32m      "Adding fearures 326 236\n",[m
+[32m+[m[32m      "Adding fearures 327 261\n",[m
+[32m+[m[32m      "Adding fearures 329 285\n",[m
+[32m+[m[32m      "Adding fearures 333 309\n",[m
+[32m+[m[32m      "Adding fearures 345 330\n",[m
+[32m+[m[32m      "Adding fearures 362 348\n",[m
+[32m+[m[32m      "Adding fearures 382 362\n",[m
+[32m+[m[32m      "Adding fearures 403 374\n",[m
+[32m+[m[32m      "Adding fearures 427 377\n",[m
+[32m+[m[32m      "Adding fearures 449 373\n",[m
+[32m+[m[32m      "Adding fearures 466 360\n",[m
+[32m+[m[32m      "Adding fearures 482 345\n",[m
+[32m+[m[32m      "Adding fearures 494 326\n",[m
+[32m+[m[32m      "Adding fearures 501 306\n",[m
+[32m+[m[32m      "Adding fearures 503 284\n",[m
+[32m+[m[32m      "Adding fearures 504 262\n",[m
+[32m+[m[32m      "Adding fearures 505 239\n",[m
+[32m+[m[32m      "Adding fearures 346 222\n",[m
+[32m+[m[32m      "Adding fearures 361 212\n",[m
+[32m+[m[32m      "Adding fearures 379 209\n",[m
+[32m+[m[32m      "Adding fearures 397 212\n",[m
+[32m+[m[32m      "Adding fearures 414 219\n",[m
+[32m+[m[32m      "Adding fearures 436 221\n",[m
+[32m+[m[32m      "Adding fearures 453 216\n",[m
+[32m+[m[32m      "Adding fearures 470 214\n",[m
+[32m+[m[32m      "Adding fearures 486 217\n",[m
+[32m+[m[32m      "Adding fearures 497 228\n",[m
+[32m+[m[32m      "Adding fearures 426 238\n",[m
+[32m+[m[32m      "Adding fearures 427 253\n",[m
+[32m+[m[32m      "Adding fearures 428 268\n",[m
+[32m+[m[32m      "Adding fearures 430 284\n",[m
+[32m+[m[32m      "Adding fearures 407 291\n",[m
+[32m+[m[32m      "Adding fearures 417 295\n",[m
+[32m+[m[32m      "Adding fearures 428 298\n",[m
+[32m+[m[32m      "Adding fearures 438 295\n",[m
+[32m+[m[32m      "Adding fearures 446 292\n",[m
+[32m+[m[32m      "Adding fearures 368 240\n",[m
+[32m+[m[32m      "Adding fearures 379 238\n",[m
+[32m+[m[32m      "Adding fearures 390 238\n",[m
+[32m+[m[32m      "Adding fearures 400 242\n",[m
+[32m+[m[32m      "Adding fearures 389 244\n",[m
+[32m+[m[32m      "Adding fearures 379 244\n",[m
+[32m+[m[32m      "Adding fearures 447 244\n",[m
+[32m+[m[32m      "Adding fearures 458 240\n",[m
+[32m+[m[32m      "Adding fearures 468 241\n",[m
+[32m+[m[32m      "Adding fearures 478 245\n",[m
+[32m+[m[32m      "Adding fearures 468 248\n",[m
+[32m+[m[32m      "Adding fearures 458 247\n",[m
+[32m+[m[32m      "Adding fearures 390 318\n",[m
+[32m+[m[32m      "Adding fearures 404 312\n",[m
+[32m+[m[32m      "Adding fearures 418 309\n",[m
+[32m+[m[32m      "Adding fearures 428 312\n",[m
+[32m+[m[32m      "Adding fearures 437 309\n",[m
+[32m+[m[32m      "Adding fearures 449 313\n",[m
+[32m+[m[32m      "Adding fearures 460 319\n",[m
+[32m+[m[32m      "Adding fearures 450 331\n",[m
+[32m+[m[32m      "Adding fearures 438 336\n",[m
+[32m+[m[32m      "Adding fearures 428 337\n",[m
+[32m+[m[32m      "Adding fearures 417 336\n",[m
+[32m+[m[32m      "Adding fearures 404 330\n",[m
+[32m+[m[32m      "Adding fearures 396 319\n",[m
+[32m+[m[32m      "Adding fearures 418 318\n",[m
+[32m+[m[32m      "Adding fearures 428 319\n",[m
+[32m+[m[32m      "Adding fearures 437 318\n",[m
+[32m+[m[32m      "Adding fearures 454 320\n",[m
+[32m+[m[32m      "Adding fearures 438 321\n",[m
+[32m+[m[32m      "Adding fearures 428 322\n",[m
+[32m+[m[32m      "Adding fearures 418 320\n"[m
+      ][m
+     },[m
+     {[m
+[31m-     "data": {[m
+[31m-      "text/plain": [[m
+[31m-       "array([[[16, 15, 59],\n",[m
+[31m-       "        [16, 15, 59],\n",[m
+[31m-       "        [19, 16, 60],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [30, 37, 18],\n",[m
+[31m-       "        [26, 29, 26],\n",[m
+[31m-       "        [35, 38, 35]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[16, 15, 59],\n",[m
+[31m-       "        [17, 16, 60],\n",[m
+[31m-       "        [17, 14, 57],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [32, 38, 19],\n",[m
+[31m-       "        [29, 32, 30],\n",[m
+[31m-       "        [35, 38, 35]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[10, 13, 40],\n",[m
+[31m-       "        [18, 21, 48],\n",[m
+[31m-       "        [24, 23, 55],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [30, 35, 32],\n",[m
+[31m-       "        [30, 33, 37],\n",[m
+[31m-       "        [32, 35, 40]],\n",[m
+[31m-       "\n",[m
+[31m-       "       ...,\n",[m
+[31m-       "\n",[m
+[31m-       "       [[11,  0,  0],\n",[m
+[31m-       "        [ 9,  0,  0],\n",[m
+[31m-       "        [11,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[ 1,  0,  0],\n",[m
+[31m-       "        [ 3,  0,  0],\n",[m
+[31m-       "        [ 5,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[ 1,  0,  0],\n",[m
+[31m-       "        [ 1,  0,  0],\n",[m
+[31m-       "        [ 4,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  1],\n",[m
+[31m-       "        [ 0,  0,  4]]], dtype=uint8)"[m
+[31m-      ][m
+[31m-     },[m
+[31m-     "execution_count": 1,[m
+[31m-     "metadata": {},[m
+[31m-     "output_type": "execute_result"[m
+[31m-    },[m
+[31m-    {[m
+[31m-     "data": {[m
+[31m-      "text/plain": [[m
+[31m-       "array([[[16, 15, 59],\n",[m
+[31m-       "        [16, 15, 59],\n",[m
+[31m-       "        [19, 16, 60],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [30, 37, 18],\n",[m
+[31m-       "        [26, 29, 26],\n",[m
+[31m-       "        [35, 38, 35]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[16, 15, 59],\n",[m
+[31m-       "        [17, 16, 60],\n",[m
+[31m-       "        [17, 14, 57],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [32, 38, 19],\n",[m
+[31m-       "        [29, 32, 30],\n",[m
+[31m-       "        [35, 38, 35]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[10, 13, 40],\n",[m
+[31m-       "        [18, 21, 48],\n",[m
+[31m-       "        [24, 23, 55],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [30, 35, 32],\n",[m
+[31m-       "        [30, 33, 37],\n",[m
+[31m-       "        [32, 35, 40]],\n",[m
+[31m-       "\n",[m
+[31m-       "       ...,\n",[m
+[31m-       "\n",[m
+[31m-       "       [[11,  0,  0],\n",[m
+[31m-       "        [ 9,  0,  0],\n",[m
+[31m-       "        [11,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[ 1,  0,  0],\n",[m
+[31m-       "        [ 3,  0,  0],\n",[m
+[31m-       "        [ 5,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[ 1,  0,  0],\n",[m
+[31m-       "        [ 1,  0,  0],\n",[m
+[31m-       "        [ 4,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  1],\n",[m
+[31m-       "        [ 0,  0,  4]]], dtype=uint8)"[m
+[31m-      ][m
+[31m-     },[m
+[31m-     "execution_count": 1,[m
+[31m-     "metadata": {},[m
+[31m-     "output_type": "execute_result"[m
+[31m-    },[m
+[31m-    {[m
+[31m-     "data": {[m
+[31m-      "text/plain": [[m
+[31m-       "array([[[16, 15, 59],\n",[m
+[31m-       "        [16, 15, 59],\n",[m
+[31m-       "        [19, 16, 60],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [30, 37, 18],\n",[m
+[31m-       "        [26, 29, 26],\n",[m
+[31m-       "        [35, 38, 35]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[16, 15, 59],\n",[m
+[31m-       "        [17, 16, 60],\n",[m
+[31m-       "        [17, 14, 57],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [32, 38, 19],\n",[m
+[31m-       "        [29, 32, 30],\n",[m
+[31m-       "        [35, 38, 35]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[10, 13, 40],\n",[m
+[31m-       "        [18, 21, 48],\n",[m
+[31m-       "        [24, 23, 55],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [30, 35, 32],\n",[m
+[31m-       "        [30, 33, 37],\n",[m
+[31m-       "        [32, 35, 40]],\n",[m
+[31m-       "\n",[m
+[31m-       "       ...,\n",[m
+[31m-       "\n",[m
+[31m-       "       [[11,  0,  0],\n",[m
+[31m-       "        [ 9,  0,  0],\n",[m
+[31m-       "        [11,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[ 1,  0,  0],\n",[m
+[31m-       "        [ 3,  0,  0],\n",[m
+[31m-       "        [ 5,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[ 1,  0,  0],\n",[m
+[31m-       "        [ 1,  0,  0],\n",[m
+[31m-       "        [ 4,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  1],\n",[m
+[31m-       "        [ 0,  0,  4]]], dtype=uint8)"[m
+[31m-      ][m
+[31m-     },[m
+[31m-     "execution_count": 1,[m
+[31m-     "metadata": {},[m
+[31m-     "output_type": "execute_result"[m
+[31m-    },[m
+[31m-    {[m
+[31m-     "data": {[m
+[31m-      "text/plain": [[m
+[31m-       "array([[[16, 15, 59],\n",[m
+[31m-       "        [16, 15, 59],\n",[m
+[31m-       "        [19, 16, 60],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [30, 37, 18],\n",[m
+[31m-       "        [26, 29, 26],\n",[m
+[31m-       "        [35, 38, 35]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[16, 15, 59],\n",[m
+[31m-       "        [17, 16, 60],\n",[m
+[31m-       "        [17, 14, 57],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [32, 38, 19],\n",[m
+[31m-       "        [29, 32, 30],\n",[m
+[31m-       "        [35, 38, 35]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[10, 13, 40],\n",[m
+[31m-       "        [18, 21, 48],\n",[m
+[31m-       "        [24, 23, 55],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [30, 35, 32],\n",[m
+[31m-       "        [30, 33, 37],\n",[m
+[31m-       "        [32, 35, 40]],\n",[m
+[31m-       "\n",[m
+[31m-       "       ...,\n",[m
+[31m-       "\n",[m
+[31m-       "       [[11,  0,  0],\n",[m
+[31m-       "        [ 9,  0,  0],\n",[m
+[31m-       "        [11,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[ 1,  0,  0],\n",[m
+[31m-       "        [ 3,  0,  0],\n",[m
+[31m-       "        [ 5,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[ 1,  0,  0],\n",[m
+[31m-       "        [ 1,  0,  0],\n",[m
+[31m-       "        [ 4,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  1],\n",[m
+[31m-       "        [ 0,  0,  4]]], dtype=uint8)"[m
+[31m-      ][m
+[31m-     },[m
+[31m-     "execution_count": 1,[m
+[31m-     "metadata": {},[m
+[31m-     "output_type": "execute_result"[m
+[31m-    },[m
+[31m-    {[m
+[31m-     "data": {[m
+[31m-      "text/plain": [[m
+[31m-       "array([[[16, 15, 59],\n",[m
+[31m-       "        [16, 15, 59],\n",[m
+[31m-       "        [19, 16, 60],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [30, 37, 18],\n",[m
+[31m-       "        [26, 29, 26],\n",[m
+[31m-       "        [35, 38, 35]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[16, 15, 59],\n",[m
+[31m-       "        [17, 16, 60],\n",[m
+[31m-       "        [17, 14, 57],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [32, 38, 19],\n",[m
+[31m-       "        [29, 32, 30],\n",[m
+[31m-       "        [35, 38, 35]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[10, 13, 40],\n",[m
+[31m-       "        [18, 21, 48],\n",[m
+[31m-       "        [24, 23, 55],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [30, 35, 32],\n",[m
+[31m-       "        [30, 33, 37],\n",[m
+[31m-       "        [32, 35, 40]],\n",[m
+[31m-       "\n",[m
+[31m-       "       ...,\n",[m
+[31m-       "\n",[m
+[31m-       "       [[11,  0,  0],\n",[m
+[31m-       "        [ 9,  0,  0],\n",[m
+[31m-       "        [11,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[ 1,  0,  0],\n",[m
+[31m-       "        [ 3,  0,  0],\n",[m
+[31m-       "        [ 5,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[ 1,  0,  0],\n",[m
+[31m-       "        [ 1,  0,  0],\n",[m
+[31m-       "        [ 4,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  1],\n",[m
+[31m-       "        [ 0,  0,  4]]], dtype=uint8)"[m
+[31m-      ][m
+[31m-     },[m
+[31m-     "execution_count": 1,[m
+[31m-     "metadata": {},[m
+[31m-     "output_type": "execute_result"[m
+[31m-    },[m
+[31m-    {[m
+[31m-     "data": {[m
+[31m-      "text/plain": [[m
+[31m-       "array([[[16, 15, 59],\n",[m
+[31m-       "        [16, 15, 59],\n",[m
+[31m-       "        [19, 16, 60],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [30, 37, 18],\n",[m
+[31m-       "        [26, 29, 26],\n",[m
+[31m-       "        [35, 38, 35]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[16, 15, 59],\n",[m
+[31m-       "        [17, 16, 60],\n",[m
+[31m-       "        [17, 14, 57],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [32, 38, 19],\n",[m
+[31m-       "        [29, 32, 30],\n",[m
+[31m-       "        [35, 38, 35]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[10, 13, 40],\n",[m
+[31m-       "        [18, 21, 48],\n",[m
+[31m-       "        [24, 23, 55],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [30, 35, 32],\n",[m
+[31m-       "        [30, 33, 37],\n",[m
+[31m-       "        [32, 35, 40]],\n",[m
+[31m-       "\n",[m
+[31m-       "       ...,\n",[m
+[31m-       "\n",[m
+[31m-       "       [[11,  0,  0],\n",[m
+[31m-       "        [ 9,  0,  0],\n",[m
+[31m-       "        [11,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[ 1,  0,  0],\n",[m
+[31m-       "        [ 3,  0,  0],\n",[m
+[31m-       "        [ 5,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[ 1,  0,  0],\n",[m
+[31m-       "        [ 1,  0,  0],\n",[m
+[31m-       "        [ 4,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  1],\n",[m
+[31m-       "        [ 0,  0,  4]]], dtype=uint8)"[m
+[31m-      ][m
+[31m-     },[m
+[31m-     "execution_count": 1,[m
+[31m-     "metadata": {},[m
+[31m-     "output_type": "execute_result"[m
+[31m-    },[m
+[31m-    {[m
+[31m-     "data": {[m
+[31m-      "text/plain": [[m
+[31m-       "array([[[16, 15, 59],\n",[m
+[31m-       "        [16, 15, 59],\n",[m
+[31m-       "        [19, 16, 60],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [30, 37, 18],\n",[m
+[31m-       "        [26, 29, 26],\n",[m
+[31m-       "        [35, 38, 35]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[16, 15, 59],\n",[m
+[31m-       "        [17, 16, 60],\n",[m
+[31m-       "        [17, 14, 57],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [32, 38, 19],\n",[m
+[31m-       "        [29, 32, 30],\n",[m
+[31m-       "        [35, 38, 35]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[10, 13, 40],\n",[m
+[31m-       "        [18, 21, 48],\n",[m
+[31m-       "        [24, 23, 55],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [30, 35, 32],\n",[m
+[31m-       "        [30, 33, 37],\n",[m
+[31m-       "        [32, 35, 40]],\n",[m
+[31m-       "\n",[m
+[31m-       "       ...,\n",[m
+[31m-       "\n",[m
+[31m-       "       [[11,  0,  0],\n",[m
+[31m-       "        [ 9,  0,  0],\n",[m
+[31m-       "        [11,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[ 1,  0,  0],\n",[m
+[31m-       "        [ 3,  0,  0],\n",[m
+[31m-       "        [ 5,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[ 1,  0,  0],\n",[m
+[31m-       "        [ 1,  0,  0],\n",[m
+[31m-       "        [ 4,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  1],\n",[m
+[31m-       "        [ 0,  0,  4]]], dtype=uint8)"[m
+[31m-      ][m
+[31m-     },[m
+[31m-     "execution_count": 1,[m
+[31m-     "metadata": {},[m
+[31m-     "output_type": "execute_result"[m
+[31m-    },[m
+[31m-    {[m
+[31m-     "data": {[m
+[31m-      "text/plain": [[m
+[31m-       "array([[[16, 15, 59],\n",[m
+[31m-       "        [16, 15, 59],\n",[m
+[31m-       "        [19, 16, 60],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [30, 37, 18],\n",[m
+[31m-       "        [26, 29, 26],\n",[m
+[31m-       "        [35, 38, 35]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[16, 15, 59],\n",[m
+[31m-       "        [17, 16, 60],\n",[m
+[31m-       "        [17, 14, 57],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [32, 38, 19],\n",[m
+[31m-       "        [29, 32, 30],\n",[m
+[31m-       "        [35, 38, 35]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[10, 13, 40],\n",[m
+[31m-       "        [18, 21, 48],\n",[m
+[31m-       "        [24, 23, 55],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [30, 35, 32],\n",[m
+[31m-       "        [30, 33, 37],\n",[m
+[31m-       "        [32, 35, 40]],\n",[m
+[31m-       "\n",[m
+[31m-       "       ...,\n",[m
+[31m-       "\n",[m
+[31m-       "       [[11,  0,  0],\n",[m
+[31m-       "        [ 9,  0,  0],\n",[m
+[31m-       "        [11,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[ 1,  0,  0],\n",[m
+[31m-       "        [ 3,  0,  0],\n",[m
+[31m-       "        [ 5,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[ 1,  0,  0],\n",[m
+[31m-       "        [ 1,  0,  0],\n",[m
+[31m-       "        [ 4,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  1],\n",[m
+[31m-       "        [ 0,  0,  4]]], dtype=uint8)"[m
+[31m-      ][m
+[31m-     },[m
+[31m-     "execution_count": 1,[m
+[31m-     "metadata": {},[m
+[31m-     "output_type": "execute_result"[m
+[31m-    },[m
+[31m-    {[m
+[31m-     "data": {[m
+[31m-      "text/plain": [[m
+[31m-       "array([[[16, 15, 59],\n",[m
+[31m-       "        [16, 15, 59],\n",[m
+[31m-       "        [19, 16, 60],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [30, 37, 18],\n",[m
+[31m-       "        [26, 29, 26],\n",[m
+[31m-       "        [35, 38, 35]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[16, 15, 59],\n",[m
+[31m-       "        [17, 16, 60],\n",[m
+[31m-       "        [17, 14, 57],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [32, 38, 19],\n",[m
+[31m-       "        [29, 32, 30],\n",[m
+[31m-       "        [35, 38, 35]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[10, 13, 40],\n",[m
+[31m-       "        [18, 21, 48],\n",[m
+[31m-       "        [24, 23, 55],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [30, 35, 32],\n",[m
+[31m-       "        [30, 33, 37],\n",[m
+[31m-       "        [32, 35, 40]],\n",[m
+[31m-       "\n",[m
+[31m-       "       ...,\n",[m
+[31m-       "\n",[m
+[31m-       "       [[11,  0,  0],\n",[m
+[31m-       "        [ 9,  0,  0],\n",[m
+[31m-       "        [11,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[ 1,  0,  0],\n",[m
+[31m-       "        [ 3,  0,  0],\n",[m
+[31m-       "        [ 5,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[ 1,  0,  0],\n",[m
+[31m-       "        [ 1,  0,  0],\n",[m
+[31m-       "        [ 4,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  1],\n",[m
+[31m-       "        [ 0,  0,  4]]], dtype=uint8)"[m
+[31m-      ][m
+[31m-     },[m
+[31m-     "execution_count": 1,[m
+[31m-     "metadata": {},[m
+[31m-     "output_type": "execute_result"[m
+[31m-    },[m
+[31m-    {[m
+[31m-     "data": {[m
+[31m-      "text/plain": [[m
+[31m-       "array([[[16, 15, 59],\n",[m
+[31m-       "        [16, 15, 59],\n",[m
+[31m-       "        [19, 16, 60],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [30, 37, 18],\n",[m
+[31m-       "        [26, 29, 26],\n",[m
+[31m-       "        [35, 38, 35]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[16, 15, 59],\n",[m
+[31m-       "        [17, 16, 60],\n",[m
+[31m-       "        [17, 14, 57],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [32, 38, 19],\n",[m
+[31m-       "        [29, 32, 30],\n",[m
+[31m-       "        [35, 38, 35]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[10, 13, 40],\n",[m
+[31m-       "        [18, 21, 48],\n",[m
+[31m-       "        [24, 23, 55],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [30, 35, 32],\n",[m
+[31m-       "        [30, 33, 37],\n",[m
+[31m-       "        [32, 35, 40]],\n",[m
+[31m-       "\n",[m
+[31m-       "       ...,\n",[m
+[31m-       "\n",[m
+[31m-       "       [[11,  0,  0],\n",[m
+[31m-       "        [ 9,  0,  0],\n",[m
+[31m-       "        [11,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[ 1,  0,  0],\n",[m
+[31m-       "        [ 3,  0,  0],\n",[m
+[31m-       "        [ 5,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[ 1,  0,  0],\n",[m
+[31m-       "        [ 1,  0,  0],\n",[m
+[31m-       "        [ 4,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  1],\n",[m
+[31m-       "        [ 0,  0,  4]]], dtype=uint8)"[m
+[31m-      ][m
+[31m-     },[m
+[31m-     "execution_count": 1,[m
+[31m-     "metadata": {},[m
+[31m-     "output_type": "execute_result"[m
+[31m-    },[m
+[31m-    {[m
+[31m-     "data": {[m
+[31m-      "text/plain": [[m
+[31m-       "array([[[16, 15, 59],\n",[m
+[31m-       "        [16, 15, 59],\n",[m
+[31m-       "        [19, 16, 60],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [30, 37, 18],\n",[m
+[31m-       "        [26, 29, 26],\n",[m
+[31m-       "        [35, 38, 35]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[16, 15, 59],\n",[m
+[31m-       "        [17, 16, 60],\n",[m
+[31m-       "        [17, 14, 57],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [32, 38, 19],\n",[m
+[31m-       "        [29, 32, 30],\n",[m
+[31m-       "        [35, 38, 35]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[10, 13, 40],\n",[m
+[31m-       "        [18, 21, 48],\n",[m
+[31m-       "        [24, 23, 55],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [30, 35, 32],\n",[m
+[31m-       "        [30, 33, 37],\n",[m
+[31m-       "        [32, 35, 40]],\n",[m
+[31m-       "\n",[m
+[31m-       "       ...,\n",[m
+[31m-       "\n",[m
+[31m-       "       [[11,  0,  0],\n",[m
+[31m-       "        [ 9,  0,  0],\n",[m
+[31m-       "        [11,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[ 1,  0,  0],\n",[m
+[31m-       "        [ 3,  0,  0],\n",[m
+[31m-       "        [ 5,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[ 1,  0,  0],\n",[m
+[31m-       "        [ 1,  0,  0],\n",[m
+[31m-       "        [ 4,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  1],\n",[m
+[31m-       "        [ 0,  0,  4]]], dtype=uint8)"[m
+[31m-      ][m
+[31m-     },[m
+[31m-     "execution_count": 1,[m
+[31m-     "metadata": {},[m
+[31m-     "output_type": "execute_result"[m
+[31m-    },[m
+[31m-    {[m
+[31m-     "data": {[m
+[31m-      "text/plain": [[m
+[31m-       "array([[[16, 15, 59],\n",[m
+[31m-       "        [16, 15, 59],\n",[m
+[31m-       "        [19, 16, 60],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [30, 37, 18],\n",[m
+[31m-       "        [26, 29, 26],\n",[m
+[31m-       "        [35, 38, 35]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[16, 15, 59],\n",[m
+[31m-       "        [17, 16, 60],\n",[m
+[31m-       "        [17, 14, 57],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [32, 38, 19],\n",[m
+[31m-       "        [29, 32, 30],\n",[m
+[31m-       "        [35, 38, 35]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[10, 13, 40],\n",[m
+[31m-       "        [18, 21, 48],\n",[m
+[31m-       "        [24, 23, 55],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [30, 35, 32],\n",[m
+[31m-       "        [30, 33, 37],\n",[m
+[31m-       "        [32, 35, 40]],\n",[m
+[31m-       "\n",[m
+[31m-       "       ...,\n",[m
+[31m-       "\n",[m
+[31m-       "       [[11,  0,  0],\n",[m
+[31m-       "        [ 9,  0,  0],\n",[m
+[31m-       "        [11,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[ 1,  0,  0],\n",[m
+[31m-       "        [ 3,  0,  0],\n",[m
+[31m-       "        [ 5,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[ 1,  0,  0],\n",[m
+[31m-       "        [ 1,  0,  0],\n",[m
+[31m-       "        [ 4,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  1],\n",[m
+[31m-       "        [ 0,  0,  4]]], dtype=uint8)"[m
+[31m-      ][m
+[31m-     },[m
+[31m-     "execution_count": 1,[m
+[31m-     "metadata": {},[m
+[31m-     "output_type": "execute_result"[m
+[31m-    },[m
+[31m-    {[m
+[31m-     "data": {[m
+[31m-      "text/plain": [[m
+[31m-       "array([[[16, 15, 59],\n",[m
+[31m-       "        [16, 15, 59],\n",[m
+[31m-       "        [19, 16, 60],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [30, 37, 18],\n",[m
+[31m-       "        [26, 29, 26],\n",[m
+[31m-       "        [35, 38, 35]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[16, 15, 59],\n",[m
+[31m-       "        [17, 16, 60],\n",[m
+[31m-       "        [17, 14, 57],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [32, 38, 19],\n",[m
+[31m-       "        [29, 32, 30],\n",[m
+[31m-       "        [35, 38, 35]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[10, 13, 40],\n",[m
+[31m-       "        [18, 21, 48],\n",[m
+[31m-       "        [24, 23, 55],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [30, 35, 32],\n",[m
+[31m-       "        [30, 33, 37],\n",[m
+[31m-       "        [32, 35, 40]],\n",[m
+[31m-       "\n",[m
+[31m-       "       ...,\n",[m
+[31m-       "\n",[m
+[31m-       "       [[11,  0,  0],\n",[m
+[31m-       "        [ 9,  0,  0],\n",[m
+[31m-       "        [11,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[ 1,  0,  0],\n",[m
+[31m-       "        [ 3,  0,  0],\n",[m
+[31m-       "        [ 5,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[ 1,  0,  0],\n",[m
+[31m-       "        [ 1,  0,  0],\n",[m
+[31m-       "        [ 4,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  1],\n",[m
+[31m-       "        [ 0,  0,  4]]], dtype=uint8)"[m
+[31m-      ][m
+[31m-     },[m
+[31m-     "execution_count": 1,[m
+[31m-     "metadata": {},[m
+[31m-     "output_type": "execute_result"[m
+[31m-    },[m
+[31m-    {[m
+[31m-     "data": {[m
+[31m-      "text/plain": [[m
+[31m-       "array([[[16, 15, 59],\n",[m
+[31m-       "        [16, 15, 59],\n",[m
+[31m-       "        [19, 16, 60],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [30, 37, 18],\n",[m
+[31m-       "        [26, 29, 26],\n",[m
+[31m-       "        [35, 38, 35]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[16, 15, 59],\n",[m
+[31m-       "        [17, 16, 60],\n",[m
+[31m-       "        [17, 14, 57],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [32, 38, 19],\n",[m
+[31m-       "        [29, 32, 30],\n",[m
+[31m-       "        [35, 38, 35]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[10, 13, 40],\n",[m
+[31m-       "        [18, 21, 48],\n",[m
+[31m-       "        [24, 23, 55],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [30, 35, 32],\n",[m
+[31m-       "        [30, 33, 37],\n",[m
+[31m-       "        [32, 35, 40]],\n",[m
+[31m-       "\n",[m
+[31m-       "       ...,\n",[m
+[31m-       "\n",[m
+[31m-       "       [[11,  0,  0],\n",[m
+[31m-       "        [ 9,  0,  0],\n",[m
+[31m-       "        [11,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[ 1,  0,  0],\n",[m
+[31m-       "        [ 3,  0,  0],\n",[m
+[31m-       "        [ 5,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[ 1,  0,  0],\n",[m
+[31m-       "        [ 1,  0,  0],\n",[m
+[31m-       "        [ 4,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  1],\n",[m
+[31m-       "        [ 0,  0,  4]]], dtype=uint8)"[m
+[31m-      ][m
+[31m-     },[m
+[31m-     "execution_count": 1,[m
+[31m-     "metadata": {},[m
+[31m-     "output_type": "execute_result"[m
+[31m-    },[m
+[31m-    {[m
+[31m-     "data": {[m
+[31m-      "text/plain": [[m
+[31m-       "array([[[16, 15, 59],\n",[m
+[31m-       "        [16, 15, 59],\n",[m
+[31m-       "        [19, 16, 60],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [30, 37, 18],\n",[m
+[31m-       "        [26, 29, 26],\n",[m
+[31m-       "        [35, 38, 35]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[16, 15, 59],\n",[m
+[31m-       "        [17, 16, 60],\n",[m
+[31m-       "        [17, 14, 57],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [32, 38, 19],\n",[m
+[31m-       "        [29, 32, 30],\n",[m
+[31m-       "        [35, 38, 35]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[10, 13, 40],\n",[m
+[31m-       "        [18, 21, 48],\n",[m
+[31m-       "        [24, 23, 55],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [30, 35, 32],\n",[m
+[31m-       "        [30, 33, 37],\n",[m
+[31m-       "        [32, 35, 40]],\n",[m
+[31m-       "\n",[m
+[31m-       "       ...,\n",[m
+[31m-       "\n",[m
+[31m-       "       [[11,  0,  0],\n",[m
+[31m-       "        [ 9,  0,  0],\n",[m
+[31m-       "        [11,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[ 1,  0,  0],\n",[m
+[31m-       "        [ 3,  0,  0],\n",[m
+[31m-       "        [ 5,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  0]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[ 1,  0,  0],\n",[m
+[31m-       "        [ 1,  0,  0],\n",[m
+[31m-       "        [ 4,  0,  0],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [ 0,  0,  0],\n",[m
+[31m-       "        [ 0,  0,  1],\n",[m
+[31m-       "        [ 0,  0,  4]]], dtype=uint8)"[m
+[31m-      ][m
+[31m-     },[m
+[31m-     "execution_count": 1,[m
+[31m-     "metadata": {},[m
+[31m-     "output_type": "execute_result"[m
+[31m-    },[m
+[31m-    {[m
+[31m-     "data": {[m
+[31m-      "text/plain": [[m
+[31m-       "array([[[16, 15, 59],\n",[m
+[31m-       "        [16, 15, 59],\n",[m
+[31m-       "        [19, 16, 60],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [30, 37, 18],\n",[m
+[31m-       "        [26, 29, 26],\n",[m
+[31m-       "        [35, 38, 35]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[16, 15, 59],\n",[m
+[31m-       "        [17, 16, 60],\n",[m
+[31m-       "        [17, 14, 57],\n",[m
+[31m-       "        ...,\n",[m
+[31m-       "        [32, 38, 19],\n",[m
+[31m-       "        [29, 32, 30],\n",[m
+[31m-       "        [35, 38, 35]],\n",[m
+[31m-       "\n",[m
+[31m-       "       [[10, 13, 40],\n",[m
+[31m-       "        [18, 21, 48],\n",[m
+[31m-       "        [24, 23, 55],\n",
