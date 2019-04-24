@@ -12,5 +12,5 @@ Steps to run the code:-
 
 If there are any issues with the python environment, you can use the environment.yml file inside to create a new anaconda environment that has the saame requirements as the project
 
-Note that since the training of models takes over a couple of hours, they are saved and the notebook simply loads them.*
+*Note that since the training of models takes over a couple of hours, they are saved and the notebook simply loads them.*
 
